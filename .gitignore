@@ -1,0 +1,3 @@
+## Ignoreing env variables
+variables.env
+./frontend/node_modules
