@@ -1,0 +1,7 @@
+## Ignoreing env variables
+variables.env
+## Ignore node modules && build
+./frontend/node_modules
+./frontend/dist
+## Ignore Target modules
+./backend/target
