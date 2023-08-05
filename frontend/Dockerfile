@@ -3,8 +3,9 @@ WORKDIR /app
 COPY . .
 RUN npm install --force
 RUN npm install -g @angular/cli --force
-RUN ng build --configuration=production
-
+RUN ng build --prod
+# RUN ng build --aot
+# --build-optimizer=true --output-hashing=none
 FROM nginx:alpine
 # Serve Application using Nginx Server
 COPY --from=build /app/dist/josh-anderson-portfolio/ /usr/share/nginx/html
