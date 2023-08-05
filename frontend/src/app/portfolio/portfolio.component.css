@@ -51,12 +51,15 @@ canvas{
 }
 .learn-more{
     opacity:0;
-    margin-left: 85%;
+    margin-left: 82%;
     margin-top:5%;
     border-radius: 0;
     border:1pt #673ab7 solid;
     color:greenyellow;
     margin-bottom: 30px;
+    width: 100px;
+    font-size: 10px;
+
 }
 .learn-more:hover{
     background-color: rgb(41, 41, 41);

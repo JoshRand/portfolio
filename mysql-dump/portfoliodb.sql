@@ -40,7 +40,7 @@ CREATE TABLE `project` (
 
 LOCK TABLES `project` WRITE;
 /*!40000 ALTER TABLE `project` DISABLE KEYS */;
-INSERT INTO `project` VALUES (1,'-QF4bZye_Ns','An Application to control characters in a video game based on game memory data. ','','../../assets/TAGP/AStarVisualizer2.PNG','.NET,Windows Forms,Pathfinding,MemoryAccess Library,Visual Studio,Git','The Automated Game Player'),
+INSERT INTO `project` VALUES (1,'-QF4bZye_Ns','An Application to control characters in a video game based on game memory data. ','','../../assets/TAGP/AStarVisualizer2.PNG','C#,.NET,Windows Forms,Pathfinding,MemoryAccess Library,Visual Studio,Git','The Automated Game Player'),
 (2,'fnVsgb1SXU8','An Android Application that controls a Treadmill based on the user\'s heart rate.','SeniorProject','../../assets/ST/MafWorkout.png','Javat,Arduino,Bluetooth,Android Studio,Git','Smart Treadmill'),
 (3,'fnVsgb1SXU8','A mock Banking Application used to Deposit, Withdraw, and Transfer funds. ','DollarsBankSpringBootApplication','../../assets/SpringbootBank/TransactionHistory.PNG','Java,Springboot,Jsp,MySQL,Rest API,JPA,CSS,Eclipse,Git,Bootstrap,HTML5','Dollars Bank'),
 (4,'fnVsgb1SXU8','A Shopping Application using Core Java, which has the option to enable MySQL mode. ','CoreJavaStandAloneShoppingApp','../../assets/ShoppingApp/ShoppingGuest.PNG','Java,JDBC,MySQL,Eclipse,Git','Core Java Shopping App'),

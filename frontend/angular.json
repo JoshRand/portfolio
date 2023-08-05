@@ -29,9 +29,6 @@
               "src/styles.css"
             ],
             "scripts": [
-              {"input" :"node_modules/bootstrap/dist/js/bootstrap.bundle.js",
-              "inject": false
-              }
             ]
           },
           "configurations": {
@@ -45,7 +42,6 @@
               "optimization": true,
               "outputHashing": "none",
               "sourceMap": false,
-              "extractCss": true,
               "namedChunks": false,
               "extractLicenses": true,
               "vendorChunk": false,
@@ -161,5 +157,8 @@
       }
     }
   },
-  "defaultProject": "josh-anderson-portfolio"
+  "defaultProject": "josh-anderson-portfolio",
+  "cli": {
+    "analytics": false
+  }
 }

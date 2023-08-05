@@ -9,7 +9,7 @@
 
 <mat-menu #menu="matMenu" class="mat-mobile-menu">
     <a *ngFor="let link of nav_links" >
-        <button mat-menu-item  [routerLink]="[link.Link]" class='mat-menu-buttons' style="text-align: center; height:80px; width: 200px; color:greenyellow; font-size: 20px;">{{ link.LinkName }}</button>
+        <button mat-menu-item  [routerLink]="[link.Link]" class='mat-menu-buttons' style="text-align: center; height:80px; width: 200px; color:greenyellow; font-size: 20px; letter-spacing: -30px;">{{ link.LinkName }}</button>
     </a>
     <app-social style="position:relative;left:55px;"></app-social>
 </mat-menu>

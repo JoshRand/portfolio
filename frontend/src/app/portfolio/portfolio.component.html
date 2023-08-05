@@ -35,9 +35,9 @@
                         <a style="color:greenyellow; text-shadow: black 2px 2px 3px;">Technologies</a>
                         <br>
                         <br>
-                        <p style="display:flex">
+                        <p style="display:flex;object-fit:fill;">
                             <mat-icon style="color:greenyellow;margin-top:10px">memory</mat-icon>
-                            <app-technologies [technologies]="[project.technologies]" style="margin-left:2px;margin-top:2px;"></app-technologies>
+                            <app-technologies [technologies]="[project.technologies]" style="margin-left:2px;margin-top:2px;margin-right:20px;max-width: 50%;"></app-technologies>
                         </p>
                         <button mat-flat-button color="primary" (click)="clickedProject()" class="learn-more"  [routerLink]="['/project', project.id]" >Learn More</button>
                     </div>

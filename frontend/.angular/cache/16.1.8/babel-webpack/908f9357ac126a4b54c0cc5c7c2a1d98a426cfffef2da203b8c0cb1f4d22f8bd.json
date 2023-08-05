@@ -1,0 +1,1 @@
+{"ast":null,"code":"export class Slide {\n  constructor(desc, img) {\n    this.description = desc;\n    this.image = img;\n  }\n}","map":null,"metadata":{},"sourceType":"module","externalDependencies":[]}

@@ -1,5 +1,5 @@
 import { HttpClient, HttpErrorResponse, HttpEvent, HttpHeaders } from "@angular/common/http";
-import { SimplePlaceholderMapper } from "@angular/compiler/src/i18n/serializers/serializer";
+// import { SimplePlaceholderMapper } from "@angular/compiler/src/i18n/serializers/serializer";
 import { Injectable } from "@angular/core";
 import { Observable, Subscription } from "rxjs";
 import { Project } from "../model/project";
