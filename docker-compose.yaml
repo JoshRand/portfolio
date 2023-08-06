@@ -35,9 +35,16 @@ services:
   frontend:
     build:
       context: frontend
+    # restart: unless-stopped
     ports:
       - 4200:4200
       - 80:80
+    volumes:
+      # - frontend-data:/usr/share/nginx/html
+      # - ./nginx-conf:/etc/nginx/conf.d
+      - certbot-etc:/etc/letsencrypt
+      - certbot-var:/var/lib/letsencrypt
+      # - frontend-data:/app/dist/josh-anderson-portfolio/
     environment:
       - BASE_URL_BACKEND=backend
     networks:
@@ -48,6 +55,22 @@ services:
       - 4200
       - 42000 
       - 80
+
+  certbot:
+    image: certbot/certbot
+    container_name: certbot
+    volumes:
+      - certbot-etc:/etc/letsencrypt
+      - certbot-var:/var/lib/letsencrypt
+      - frontend-data:/usr/share/nginx/html
+    depends_on:
+      - frontend
+    command: certonly --webroot --webroot-path=/usr/share/nginx/html --email JoshR.AndersonEng@gmail.com --agree-tos --no-eff-email --staging -d joshrand.xyz -d www.joshrand.xyz
+    
+volumes:
+  certbot-etc:
+  certbot-var:
+  frontend-data:
 
 networks:
   angular-spring: {}
