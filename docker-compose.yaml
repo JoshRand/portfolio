@@ -16,6 +16,7 @@ services:
     depends_on:
       db:
         condition: service_healthy
+
   db:
     image: mysql
     ports:
@@ -31,6 +32,7 @@ services:
       - ./mysql-dump:/docker-entrypoint-initdb.d
     networks:
       - spring-mysql
+
   frontend:
     build:
       context: frontend
@@ -40,10 +42,9 @@ services:
       - "443:443"
       #- "4200:4200"
     volumes:
-      - frontend-data:/usr/share/nginx/html
-      - certbot-etc:/etc/letsencrypt
-      - certbot-var:/var/lib/letsencrypt
+      - certs:/etc/letsencrypt
       - dhparam:/etc/ssl/certs
+      # - frontend-data:/usr/share/nginx/html
     environment:
       - BASE_URL_BACKEND=backend
     networks:
@@ -56,20 +57,24 @@ services:
       - 80
       - 443
 
-  certbot:
-    image: certbot/certbot
-    container_name: certbot
-    volumes:
-      - certbot-etc:/etc/letsencrypt
-      - certbot-var:/var/lib/letsencrypt
-      - frontend-data:/usr/share/nginx/html
-    depends_on:
-      - frontend
-    command: certonly --webroot --webroot-path=/usr/share/nginx/html --email JoshR.AndersonEng@gmail.com --agree-tos --no-eff-email --staging -d joshrand.xyz -d www.joshrand.xyz
+  # certbot:
+  #   image: certbot/certbot
+  #   container_name: certbot
+  #   volumes:
+  #     - certbot-etc:/etc/letsencrypt
+  #     - certbot-var:/var/lib/letsencrypt
+  #     - frontend-data:/usr/share/nginx/html
+  #   depends_on:
+  #     - frontend
+  #   command: certonly --webroot --webroot-path=/usr/share/nginx/html --email JoshR.AndersonEng@gmail.com --agree-tos --no-eff-email --staging -d joshrand.xyz -d www.joshrand.xyz
     
 volumes:
-  certbot-etc:
-  certbot-var:
+  certs:
+    driver: local
+    driver_opts:
+      type: none
+      device: ./certs/
+      o: bind
   frontend-data:
   dhparam:
     driver: local
