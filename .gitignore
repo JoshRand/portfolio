@@ -5,3 +5,5 @@ variables.env
 **/dist
 ## Ignore Target modules
 **/target
+## dhparam
+dhparam

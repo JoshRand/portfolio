@@ -10,6 +10,7 @@ FROM nginx:alpine
 COPY --from=build /app/dist/josh-anderson-portfolio/ /usr/share/nginx/html
 RUN ls -la
 RUN cd /usr/share/nginx/html
+RUN touch /usr/share/nginx/html/testfile.txt
 RUN ls -la
 COPY ./nginx.conf /etc/nginx/conf.d/default.conf 
 EXPOSE 80
