@@ -1,21 +1,7 @@
 version: '3.1'
 
 services:
-  backend:
-    build: backend
-    restart: always
-    env_file:
-      - variables.env
-    networks:
-      - angular-spring
-      - spring-mysql
-    ports:
-      - 8080:8080
-    expose:
-      - 8080
-    depends_on:
-      db:
-        condition: service_healthy
+
 
   db:
     image: mysql
@@ -33,55 +19,88 @@ services:
     networks:
       - spring-mysql
 
+  backend:
+    image: joshrand/portfoliofrontend:latest
+    # build: backend
+    restart: always
+    env_file:
+      - variables.env
+    networks:
+      - angular-spring
+      - spring-mysql
+    ports:
+      - 8080:8080
+    expose:
+      - 8080
+    depends_on:
+      db:
+        condition: service_healthy
+
   frontend:
     build:
       context: frontend
+    # image: joshrand/portfoliofrontend:latest
     # restart: unless-stopped
     ports:
-      - "80:80"
-      - "443:443"
-      #- "4200:4200"
-    volumes:
-      - certs:/etc/letsencrypt
-      - dhparam:/etc/ssl/certs
-      # - frontend-data:/usr/share/nginx/html
+      - "4200:4200"
     environment:
       - BASE_URL_BACKEND=backend
     networks:
       - angular-spring
+    volumes:
+      - web-root:/var/www/html
     depends_on:
       - backend
+      - webserver 
     expose:
-        #- 4200
-        #- 42000 
-      - 80
-      - 443
+      - 4200
+      - 42000 
 
-  # certbot:
-  #   image: certbot/certbot
-  #   container_name: certbot
-  #   volumes:
-  #     - certbot-etc:/etc/letsencrypt
-  #     - certbot-var:/var/lib/letsencrypt
-  #     - frontend-data:/usr/share/nginx/html
-  #   depends_on:
-  #     - frontend
-  #   command: certonly --webroot --webroot-path=/usr/share/nginx/html --email JoshR.AndersonEng@gmail.com --agree-tos --no-eff-email --staging -d joshrand.xyz -d www.joshrand.xyz
+  webserver:
+    image: nginx:mainline-alpine
+    container_name: webserver
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - web-root:/var/www/html
+      - ./nginx-conf:/etc/nginx/conf.d
+      - certbot-etc:/etc/letsencrypt
+      - certbot-var:/var/lib/letsencrypt
+    networks:
+      - angular-spring
+
+  certbot:
+    image: certbot/certbot
+    container_name: certbot
+    volumes:
+      - certbot-etc:/etc/letsencrypt
+      - certbot-var:/var/lib/letsencrypt
+      - web-root:/var/www/html
+    depends_on:
+      - webserver
+    command: certonly --webroot --webroot-path=/usr/share/nginx/html --email JoshR.AndersonEng@gmail.com --agree-tos --no-eff-email --staging -d joshrand.xyz -d www.joshrand.xyz
+
+  
     
 volumes:
+
+  certbot-etc:
+  certbot-var:
   certs:
     driver: local
     driver_opts:
       type: none
       device: ./certs/
       o: bind
-  frontend-data:
-  dhparam:
-    driver: local
-    driver_opts:
-      type: none
-      device: ./dhparam/
-      o: bind
+
+  web-root:
+    # driver: local
+    # driver_opts:
+      # type: none
+      # device: /home//node_project/views/
+      # o: bind
 
 networks:
   angular-spring: {}
