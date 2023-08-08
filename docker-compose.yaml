@@ -1,8 +1,6 @@
 version: '3.1'
 
 services:
-
-
   db:
     image: mysql
     ports:
@@ -20,7 +18,7 @@ services:
       - spring-mysql
 
   backend:
-    image: joshrand/portfoliofrontend:latest
+    image: joshrand/portfoliobackend:latest
     # build: backend
     restart: always
     env_file:
@@ -37,9 +35,9 @@ services:
         condition: service_healthy
 
   frontend:
-    build:
-      context: frontend
-    # image: joshrand/portfoliofrontend:latest
+    # build:
+    #  context: frontend
+    image: joshrand/portfoliofrontend:latest
     # restart: unless-stopped
     ports:
       - "4200:4200"
@@ -68,6 +66,7 @@ services:
       - ./nginx-conf:/etc/nginx/conf.d
       - certbot-etc:/etc/letsencrypt
       - certbot-var:/var/lib/letsencrypt
+      - dhparam:/etc/ssl/certs
     networks:
       - angular-spring
 
@@ -80,27 +79,20 @@ services:
       - web-root:/var/www/html
     depends_on:
       - webserver
-    command: certonly --webroot --webroot-path=/usr/share/nginx/html --email JoshR.AndersonEng@gmail.com --agree-tos --no-eff-email --staging -d joshrand.xyz -d www.joshrand.xyz
+    command: certonly --webroot --webroot-path=/var/www/html --email JoshR.AndersonEng@gmail.com --agree-tos --no-eff-email -d joshrand.xyz -d www.joshrand.xyz
 
-  
-    
 volumes:
 
   certbot-etc:
   certbot-var:
-  certs:
+  dhparam:
     driver: local
     driver_opts:
       type: none
-      device: ./certs/
+      device: /home/src/portfolio/dhparam/
       o: bind
 
   web-root:
-    # driver: local
-    # driver_opts:
-      # type: none
-      # device: /home//node_project/views/
-      # o: bind
 
 networks:
   angular-spring: {}
