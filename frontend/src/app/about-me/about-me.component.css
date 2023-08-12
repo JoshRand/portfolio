@@ -20,6 +20,17 @@
 
 @media only screen and (min-width: 1000px)
 {
+    @media screen and (min-width: 2700px) {
+        .name{
+           font-size: 60px;
+        }
+      }
+    p{
+        margin-left: 100px;
+        margin-right: 100px;
+        text-indent: 30px;
+        margin-top: 30px;
+    }
     .about-me-grid{
         margin-top:100px;
         margin-left: auto;
@@ -106,6 +117,12 @@
         text-align: center;
        
         
+    }
+    p{
+        margin-left: 10px;
+        margin-right: 10px;
+        text-indent: 30px;
+        margin-top: 30px;
     }
     
 }
