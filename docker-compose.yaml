@@ -18,8 +18,8 @@ services:
       - spring-mysql
 
   backend:
-    # image: joshrand/portfoliobackend:latest
-    build: backend
+    image: joshrand/portfoliobackend:latest
+    # build: backend
     restart: always
     env_file:
       - variables.env
@@ -35,9 +35,9 @@ services:
         condition: service_healthy
 
   frontend:
-    # build:
-    #  context: frontend
-    image: joshrand/portfoliofrontend:latest
+    build:
+     context: frontend
+    # image: joshrand/portfoliofrontend:latest
     # restart: unless-stopped
     ports:
       - "4200:4200"

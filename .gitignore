@@ -3,7 +3,9 @@ variables.env
 ## Ignore node modules && build
 **/node_modules
 **/.angular
+**/cache
 **/dist
+**/angular-webpack
 ## Ignore Target modules
 **/target
 ## dhparam
