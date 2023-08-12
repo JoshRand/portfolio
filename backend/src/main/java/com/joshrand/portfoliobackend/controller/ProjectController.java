@@ -12,8 +12,9 @@ import org.springframework.http.*;
 import org.springframework.web.bind.annotation.*;
 
 // Make sure to change these addresses to your address or if you're running the frontend on localhost:4200 leave it as is.
-@CrossOrigin(originPatterns = {"https://joshrand.xyz","https://www.joshrand.xyz", "http://localhost:4200", "http://localhost:80", "http://localhost" , "http://192.168.1.187:4200", "http://147.182.193.83:4200", "http://147.182.193.83:80", "http://143.198.178.176", "http://172.18.0.3:4200"}, methods = {RequestMethod.POST ,RequestMethod.GET, RequestMethod.PUT, RequestMethod.DELETE})
+//@CrossOrigin(originPatterns = {"https://joshrand.xyz","https://www.joshrand.xyz", "http://localhost:4200", "http://localhost:80", "http://localhost" , "http://192.168.1.187:4200", "http://147.182.193.83:4200", "http://147.182.193.83:80", "http://143.198.178.176", "http://172.18.0.3:4200"}, methods = {RequestMethod.POST ,RequestMethod.GET, RequestMethod.PUT, RequestMethod.DELETE})
 @RestController
+@RequestMapping(value = "/api")
 public class ProjectController {
 
     @Autowired

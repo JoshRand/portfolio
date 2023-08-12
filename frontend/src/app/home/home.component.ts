@@ -23,10 +23,13 @@ export class HomeComponent implements OnInit {
   test_array: Array<number> = new Array(12);
   // Text to type
   text_array: Array<string> = new Array(
-    "Hi there, my name is Joshua Anderson. ",
-    "I'm a Computer Engineer who loves developing with new Technologies. ",
-    "I'm also a Full-Stack Java Web developer. ",
-    "Check out my projects below!");
+    "Hello there! " ,
+    "I'm Joshua Anderson, a seasoned Senior Software Engineer with a deep passion for exploring emerging technologies. ",
+    "Alongside my professional journey, I'm nurturing my aspirations as a dedicated game developer. ",
+    "Currently, I'm engrossed in crafting an exciting MMO during my cherished moments of free time. ",
+    "Feel free to explore my intriguing projects showcased below! "
+    );
+
   // Chosen Array from Initial Position
   chosen_array: string = this.text_array[0];
   // in ms

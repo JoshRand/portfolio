@@ -1,9 +1,9 @@
+<h1 class="technologies">
+Technologies
+</h1>
 <div class="grid-container" id="gridid">
   <br />
 
-  <h1 class="technology" style="text-align: center; color: greenyellow; letter-spacing: -2px;">
-    Technologies
-  </h1>
 
   <div class="grid-item-resume">
     <div class="languages">
@@ -15,10 +15,10 @@
           ">
           Languages
         </h2>
-        <div class="technology-box" *ngFor="let language of languages; let i = index">
+        <div class="technology-box"  *ngFor="let language of languages; let i = index">
           <div style="display: flex; margin: auto">
             <app-technologies [tech]="language.name" style="margin-left: 3px; margin-top: 5px"></app-technologies>
-            <a style="margin: 10px">{{ language.name }}</a>
+            <a class="technology-box-text">{{ language.name }}</a>
           </div>
           <mat-progress-bar mode="determinate" value="{{ language.proficiency }}"></mat-progress-bar>
         </div>
@@ -34,7 +34,7 @@
         <div class="technology-box" *ngFor="let language of languages; let i = index">
           <div style="display: flex; margin: auto">
             <app-technologies [tech]="language.name" style="margin-left: 3px; margin-top: 5px"></app-technologies>
-            <a style="margin: 10px">{{ language.name }}</a>
+            <a class="technology-box-text">{{ language.name }}</a>
           </div>
           <mat-progress-bar mode="determinate" value="{{ language.proficiency }}"></mat-progress-bar>
         </div>
@@ -55,7 +55,7 @@
         <div class="technology-box" *ngFor="let framework of frameworks; let i = index">
           <div style="display: flex; margin: auto">
             <app-technologies [tech]="framework.name" style="margin-left: 3px; margin-top: 5px"></app-technologies>
-            <a style="margin: 10px">{{ framework.name }}</a>
+            <a class="technology-box-text">{{ framework.name }}</a>
           </div>
           <mat-progress-bar mode="determinate" value="{{ framework.proficiency }}"></mat-progress-bar>
         </div>
@@ -66,12 +66,12 @@
             text-shadow: black 2px 2px 3px;
             text-align: center;
           ">
-          Frameworks
+          Frameworks & Libraries
         </h2>
         <div class="technology-box" *ngFor="let framework of frameworks; let i = index">
           <div style="display: flex; margin: auto">
             <app-technologies [tech]="framework.name" style="margin-left: 3px; margin-top: 5px"></app-technologies>
-            <a style="margin: 10px">{{ framework.name }}</a>
+            <a class="technology-box-text">{{ framework.name }}</a>
           </div>
           <mat-progress-bar mode="determinate" value="{{ framework.proficiency }}"></mat-progress-bar>
         </div>
@@ -92,7 +92,7 @@
         <div class="technology-box" *ngFor="let devTool of devTools; let i = index">
           <div style="display: flex; margin: auto">
             <app-technologies [tech]="devTool.name" style="margin-left: 3px; margin-top: 5px"></app-technologies>
-            <a style="margin: 10px">{{ devTool.name }}</a>
+            <a class="technology-box-text">{{ devTool.name }}</a>
           </div>
           <mat-progress-bar mode="determinate" value="{{ devTool.proficiency }}"></mat-progress-bar>
         </div>
@@ -108,14 +108,81 @@
         <div class="technology-box" *ngFor="let devTool of devTools; let i = index">
           <div style="display: flex; margin: auto">
             <app-technologies [tech]="devTool.name" style="margin-left: 3px; margin-top: 5px"></app-technologies>
-            <a style="margin: 10px">{{ devTool.name }}</a>
+            <a class="technology-box-text">{{ devTool.name }}</a>
           </div>
           <mat-progress-bar mode="determinate" value="{{ devTool.proficiency }}"></mat-progress-bar>
         </div>
       </div>
     </div>
   </div>
+</div>
 
+
+
+<!-- WORK -->
+<h1 class="work" style="text-align: center; color: greenyellow;letter-spacing: -2px;">
+  Work Experience
+</h1>
+
+<div class="workexp">
+  <div class="other-divs">
+    <h3 style="text-align: center;
+    color: greenyellow;
+    text-shadow: black 2px 2px 3px;">
+      Senior Associate Engineer
+    </h3>
+    <p style="text-align: center; max-width: 200;">
+      April 2023 - Current <br>
+      Ascendion - Houston TX
+    </p>
+    <div style="text-align: center; max-width: 200;">
+      <ul style="position:relative; max-width: 200; margin-left: 5%; margin-right: 5%;">
+        <li *ngFor="let accomplishments of workExperienceAscendionSenior; let i = index" style="text-align: left;">
+          {{accomplishments}}
+        </li>
+      </ul>
+
+    </div>
+    <div style="margin:0 auto; display:inline-block;align-content:center">
+    </div>
+    <div class="other-divs-inner">
+      <h3 style="text-align: center;
+    color: greenyellow;
+    text-shadow: black 2px 2px 3px;">
+        Associate Engineer
+      </h3>
+      <p style="text-align: center; max-width: 200;">
+        Sep 2021 - Jun 2023
+        <br>
+        Ascendion - Houston TX
+      <div style="text-align: center; max-width: 200;">
+        <ul style="position:relative; max-width: 200; margin-left: 5%; margin-right: 5%;">
+          <li *ngFor="let accomplishments of workExperienceAscendionAssociate; let i = index" style="text-align: left;">
+            {{accomplishments}}
+          </li>
+        </ul>
+
+      </div>
+
+    </div>
+  </div>
+
+  <div class="workexp">
+
+    <div class="other-divs">
+      <h3 style="text-align: center;
+    color: greenyellow;
+    text-shadow: black 2px 2px 3px;">
+        Java Full-Stack Web Developer
+      </h3>
+      <p style="text-align: center;">
+        July 2020 - Jan 2021
+        <br>
+        Cognixia - Houston TX
+      </p>
+    </div>
+
+  </div>
   <h1 class="education" style="text-align: center; color: greenyellow; letter-spacing: -2px;">
     Education
   </h1>
@@ -162,62 +229,6 @@
       </p>
     </div>
   </div>
-
-  <!-- WORK -->
-  <h1 class="work" style="text-align: center; color: greenyellow;letter-spacing: -2px;">
-    Work Experience
-  </h1>
-
-  <div class="workexp">
-    <div class="other-divs">
-      <h3 style="text-align: center;
-    color: greenyellow;
-    text-shadow: black 2px 2px 3px;">
-        Senior Associate Engineer
-      </h3>
-      <p style="text-align: center; max-width: 200;">
-        Sep 2023 - Current <br>
-        Ascendion - Houston TX
-      <br>
-        Full-time Remote - 3 mos
-      <br>
-      </p>
-      <div style="margin:0 auto; display:inline-block;align-content:center">
-      </div>
-    <div class="other-divs-inner">
-      <h3 style="text-align: center;
-    color: greenyellow;
-    text-shadow: black 2px 2px 3px;">
-        Associate Engineer
-      </h3>
-      <p style="text-align: center; max-width: 200;">
-        Sep 2021 - Jun 2023
-      <br>
-        Ascendion - Houston TX
-      <br>
-      Full-time Remote - 1 yr 10 mos
-      </p>
-
-      </div>
-    </div>
-
-  <div class="workexp">
-
-      <div class="other-divs">
-        <h3 style="text-align: center;
-    color: greenyellow;
-    text-shadow: black 2px 2px 3px;">
-          Java Full-Stack Web Developer
-        </h3>
-        <p style="text-align: center;">
-          July 2020 - Jan 2021
-          <br>
-          Cognixia - Houston TX
-        </p>
-      </div>
-
-    </div>
-
-    <button mat-flat-button color="primary" class="portfolio-button" id="portfolio-button"
-      [routerLink]="['/portfolio']">View my Portfolio<mat-icon>keyboard_arrow_right</mat-icon></button>
-  </div>
+  <button mat-flat-button color="primary" class="portfolio-button" id="portfolio-button"
+    [routerLink]="['/portfolio']">View my Portfolio<mat-icon>keyboard_arrow_right</mat-icon></button>
+</div>

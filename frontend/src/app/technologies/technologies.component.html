@@ -1,5 +1,47 @@
 <div *ngIf="tech != undefined">
 
+            <span *ngIf="tech == 'Kubernetes'">
+                <!-- {{tech}} -->
+                <mat-icon>
+                    <img src="../../assets/Icons/kubernetes.svg" title="Kubernetes">
+                </mat-icon>       
+            </span>
+            <span *ngIf="tech == 'Nginx'">
+                <!-- {{tech}} -->
+                <mat-icon>
+                    <img src="../../assets/Icons/nginx.svg" title="Nginx">
+                </mat-icon>       
+            </span>
+            <span *ngIf="tech == 'IntelliJ'">
+                <!-- {{tech}} -->
+                <mat-icon>
+                    <img src="../../assets/Icons/intellij.svg" title="IntelliJ">
+                </mat-icon>       
+            </span>
+            <span *ngIf="tech == 'Kafka'">
+                <!-- {{tech}} -->
+                <mat-icon>
+                    <img src="../../assets/Icons/kafka.svg" title="Kafka">
+                </mat-icon>       
+            </span>
+            <span *ngIf="tech == 'Unity'">
+                <!-- {{tech}} -->
+                <mat-icon>
+                    <img src="../../assets/Icons/unity.svg" title="Unity">
+                </mat-icon>       
+            </span>
+            <span *ngIf="tech == 'Python'">
+                <!-- {{tech}} -->
+                <mat-icon>
+                    <img src="../../assets/Icons/python.svg" title="Python">
+                </mat-icon>       
+            </span>
+            <span *ngIf="tech == 'SQL'">
+                <!-- {{tech}} -->
+                <mat-icon>
+                    <img src="../../assets/Icons/sql.svg" title="SQL">
+                </mat-icon>       
+            </span>
             <span *ngIf="tech == 'GitHub'">
                 <!-- {{tech}} -->
                 <mat-icon>
@@ -175,6 +217,48 @@
         <a *ngFor="let tech of technology; index as i;">
             <a *ngIf="i != technology.length">
                 <!-- {{tech}},  -->
+            <span *ngIf="tech == 'Kubernetes'">
+                <!-- {{tech}} -->
+                <mat-icon>
+                    <img src="../../assets/Icons/kubernetes.svg" title="Kubernetes">
+                </mat-icon>       
+            </span>
+            <span *ngIf="tech == 'Nginx'">
+                <!-- {{tech}} -->
+                <mat-icon>
+                    <img src="../../assets/Icons/nginx.svg" title="Nginx">
+                </mat-icon>       
+            </span>
+            <span *ngIf="tech == 'IntelliJ'">
+                <!-- {{tech}} -->
+                <mat-icon>
+                    <img src="../../assets/Icons/intellij.svg" title="IntelliJ">
+                </mat-icon>       
+            </span>
+            <span *ngIf="tech == 'Kafka'">
+                <!-- {{tech}} -->
+                <mat-icon>
+                    <img src="../../assets/Icons/kafka.svg" title="Kafka">
+                </mat-icon>       
+            </span>
+            <span *ngIf="tech == 'Unity'">
+                <!-- {{tech}} -->
+                <mat-icon>
+                    <img src="../../assets/Icons/unity.svg" title="Unity">
+                </mat-icon>       
+            </span>
+            <span *ngIf="tech == 'Python'">
+                <!-- {{tech}} -->
+                <mat-icon>
+                    <img src="../../assets/Icons/python.svg" title="Python">
+                </mat-icon>       
+            </span>
+            <span *ngIf="tech == 'SQL'">
+                <!-- {{tech}} -->
+                <mat-icon>
+                    <img src="../../assets/Icons/sql.svg" title="SQL">
+                </mat-icon>       
+            </span>
             <span *ngIf="tech == 'Angular'">
                 <!-- {{tech}} -->
                 <mat-icon>
