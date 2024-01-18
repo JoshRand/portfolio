@@ -3,8 +3,6 @@ Technologies
 </h1>
 <div class="grid-container" id="gridid">
   <br />
-
-
   <div class="grid-item-resume">
     <div class="languages">
       <div class="mobile">
@@ -20,7 +18,9 @@ Technologies
             <app-technologies [tech]="language.name" style="margin-left: 3px; margin-top: 5px"></app-technologies>
             <a class="technology-box-text">{{ language.name }}</a>
           </div>
+            <!--
           <mat-progress-bar mode="determinate" value="{{ language.proficiency }}"></mat-progress-bar>
+            -->
         </div>
       </div>
       <div class="desktop">
@@ -36,7 +36,9 @@ Technologies
             <app-technologies [tech]="language.name" style="margin-left: 3px; margin-top: 5px"></app-technologies>
             <a class="technology-box-text">{{ language.name }}</a>
           </div>
+            <!--
           <mat-progress-bar mode="determinate" value="{{ language.proficiency }}"></mat-progress-bar>
+            -->
         </div>
       </div>
     </div>
@@ -57,7 +59,9 @@ Technologies
             <app-technologies [tech]="framework.name" style="margin-left: 3px; margin-top: 5px"></app-technologies>
             <a class="technology-box-text">{{ framework.name }}</a>
           </div>
+            <!--
           <mat-progress-bar mode="determinate" value="{{ framework.proficiency }}"></mat-progress-bar>
+            -->
         </div>
       </div>
       <div class="desktop">
@@ -73,7 +77,9 @@ Technologies
             <app-technologies [tech]="framework.name" style="margin-left: 3px; margin-top: 5px"></app-technologies>
             <a class="technology-box-text">{{ framework.name }}</a>
           </div>
+            <!--
           <mat-progress-bar mode="determinate" value="{{ framework.proficiency }}"></mat-progress-bar>
+            -->
         </div>
       </div>
     </div>
@@ -94,7 +100,9 @@ Technologies
             <app-technologies [tech]="devTool.name" style="margin-left: 3px; margin-top: 5px"></app-technologies>
             <a class="technology-box-text">{{ devTool.name }}</a>
           </div>
+            <!--
           <mat-progress-bar mode="determinate" value="{{ devTool.proficiency }}"></mat-progress-bar>
+            -->
         </div>
       </div>
       <div class="desktop">
@@ -110,7 +118,9 @@ Technologies
             <app-technologies [tech]="devTool.name" style="margin-left: 3px; margin-top: 5px"></app-technologies>
             <a class="technology-box-text">{{ devTool.name }}</a>
           </div>
+            <!--
           <mat-progress-bar mode="determinate" value="{{ devTool.proficiency }}"></mat-progress-bar>
+           -->
         </div>
       </div>
     </div>
@@ -137,9 +147,9 @@ Technologies
     </p>
     <div style="text-align: center; max-width: 200;">
       <ul style="position:relative; max-width: 200; margin-left: 5%; margin-right: 5%;">
-        <li *ngFor="let accomplishments of workExperienceAscendionSenior; let i = index" style="text-align: left;">
+       <!-- <li *ngFor="let accomplishments of workExperienceAscendionSenior; let i = index" style="text-align: left;">
           {{accomplishments}}
-        </li>
+       </li> -->
       </ul>
 
     </div>
@@ -157,9 +167,9 @@ Technologies
         Ascendion - Houston TX
       <div style="text-align: center; max-width: 200;">
         <ul style="position:relative; max-width: 200; margin-left: 5%; margin-right: 5%;">
-          <li *ngFor="let accomplishments of workExperienceAscendionAssociate; let i = index" style="text-align: left;">
+         <!-- <li *ngFor="let accomplishments of workExperienceAscendionAssociate; let i = index" style="text-align: left;">
             {{accomplishments}}
-          </li>
+         </li>-->
         </ul>
 
       </div>

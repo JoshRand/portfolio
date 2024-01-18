@@ -9,6 +9,9 @@ import javax.persistence.*;
 // Project bean for storing information about projects
 @Entity
 @Data
+@Builder
+@Getter
+@Setter
 @AllArgsConstructor
 @NoArgsConstructor
 public class Project {

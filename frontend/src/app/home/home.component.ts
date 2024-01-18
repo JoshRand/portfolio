@@ -25,8 +25,8 @@ export class HomeComponent implements OnInit {
   text_array: Array<string> = new Array(
     "Hello there! " ,
     "I'm Joshua Anderson, a seasoned Senior Software Engineer with a deep passion for exploring emerging technologies. ",
-    "Alongside my professional journey, I'm nurturing my aspirations as a dedicated game developer. ",
-    "Currently, I'm engrossed in crafting an exciting MMO during my cherished moments of free time. ",
+    "Alongside my professional journey, I'm nurturing my aspirations as a game developer. ",
+    "Currently, I'm engrossed in crafting an exciting MMO during my free time. ",
     "Feel free to explore my intriguing projects showcased below! "
     );
 
@@ -45,7 +45,7 @@ export class HomeComponent implements OnInit {
   timeout_two;
 
   constructor() {
-    
+
   }
 
   ngOnInit(): void {
@@ -67,13 +67,13 @@ export class HomeComponent implements OnInit {
     // this.text_array.forEach(element => {
     //   introduction_text_holder.innerHTML += element;
     // });
-    
+
     var rect = cursor_for_particles.getBoundingClientRect();
-    // start partical emmission 
+    // start partical emmission
     if(this.count == 0 && this.array_position == 0)
       setTimeout(()=>{this.DrawOnCanvas(rect.left - 1, rect.top +10);},this.animation_speed);
-    
-   
+
+
     // if the count is not equal to text_array length then ++ count
     if(this.count <= this.chosen_array.length - 1)
     {
@@ -92,9 +92,9 @@ export class HomeComponent implements OnInit {
       this.count = 0;
       if(this.array_position != this.text_array.length)
         introduction_text_holder.innerHTML += "";
-      // condition is met, exit from the recurrsion 
+      // condition is met, exit from the recurrsion
       // console.log(this.array_position + " " + this.text_array.length);
-      
+
       // console.log("clearing timeout")
       // clearTimeout(this.timeout_one);
       // clearTimeout(this.timeout_two);
@@ -112,13 +112,13 @@ export class HomeComponent implements OnInit {
     }
     //setTimeout(()=>{console.log("2000")},2000);
   } catch (error) {
-      
+
   }
   }
 
   public Reset(): void
   {
-    
+
     var introduction_text_holder = document.getElementById("introduction-text");
     introduction_text_holder.innerHTML = "";
     //console.log("Reset was pressed");
@@ -144,8 +144,8 @@ export class HomeComponent implements OnInit {
         this.particles.push(new Particle(x, y, 'AAFF00'));
       }
     }
-    
-    
+
+
     // update each particle / show canvas
     for (let particle of this.particles)
     {
@@ -157,7 +157,7 @@ export class HomeComponent implements OnInit {
     // delete finished particles
     for (let i = this.particles.length - 1; i >= 0; i--)
     {
-     
+
       if(!this.particles[i].finished())
       {
         //console.log("finished particle in position" + i);
@@ -168,14 +168,14 @@ export class HomeComponent implements OnInit {
     {
       try {
         var rect = cursor_for_particles.getBoundingClientRect();
-     
+
       //console.log(document.body.scrollTop);
       setTimeout(()=>{this.DrawOnCanvas(rect.left - 1, rect.top +10);},this.animation_speed);
     } catch (error) {
-        
+
     }
     }
-   
+
   }
 
   public showButton(): void{

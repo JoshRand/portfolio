@@ -26,12 +26,12 @@
                                 <section class="carousel" >
                                     <button mat-flat-button class="carousel-left-arrow-button-project" (click)="decrementSlides()"><mat-icon>arrow_back</mat-icon></button>
                                     <div class="carousel-item" (click)="openDialog()">
-                                        <mat-icon class="zoom-in">zoom_in</mat-icon>
+                                      <!-- <mat-icon class="zoom-in">zoom_in</mat-icon> -->
                                         <div *ngIf="this.project.slides.length != 0" >
                                             <img class="carosel-img"  src="{{slides[slide_index].image}}">
 
                                         </div>
-                                        
+
                                     </div>
                                     <button mat-flat-button class="carousel-right-arrow-button-project" (click)="incrementSlides()"><mat-icon>arrow_forward</mat-icon></button>
                                 </section>
@@ -41,17 +41,17 @@
                             </div>
                             <div *ngIf="tile.type === 'demo'">
                                 <iframe width="100%"
-                                height="300px" 
-                                [src]="demoUrl" 
-                                title="YouTube video player" 
-                                frameborder="0" 
+                                height="300px"
+                                [src]="demoUrl"
+                                title="YouTube video player"
+                                frameborder="0"
                                 allowfullscreen></iframe>
                             </div>
-                        
+
                         </div>
                     </div>
 
-                
+
                     <div class="desktop-grid">
                         <div
                         *ngFor="let tile of project.tiles" >
@@ -68,12 +68,12 @@
                                 <section class="carousel" >
                                     <button mat-flat-button class="carousel-left-arrow-button-project" (click)="decrementSlides()"><mat-icon>arrow_back</mat-icon></button>
                                     <div class="carousel-item" (click)="openDialog()">
-                                        <mat-icon class="zoom-in">zoom_in</mat-icon>
+                                      <!-- <mat-icon class="zoom-in">zoom_in</mat-icon> -->
                                         <div *ngIf="this.project.slides.length != 0" >
                                             <img class="carosel-img"  src="{{slides[slide_index].image}}">
 
                                         </div>
-                                        
+
                                     </div>
                                     <button mat-flat-button class="carousel-right-arrow-button-project" (click)="incrementSlides()"><mat-icon>arrow_forward</mat-icon></button>
                                 </section>
@@ -83,13 +83,13 @@
                             </div>
                             <div *ngIf="tile.type === 'demo'">
                                 <iframe width="100%"
-                                height="600" 
-                                [src]="demoUrl" 
-                                title="YouTube video player" 
-                                frameborder="0" 
+                                height="600"
+                                [src]="demoUrl"
+                                title="YouTube video player"
+                                frameborder="0"
                                 allowfullscreen></iframe>
                             </div>
-                        
+
                         </div>
                     </div>
             </div>

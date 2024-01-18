@@ -1,5 +1,7 @@
 ## Ignoreing env variables
 variables.env
+dev-variables.env
+
 ## Ignore node modules && build
 **/node_modules
 **/.angular

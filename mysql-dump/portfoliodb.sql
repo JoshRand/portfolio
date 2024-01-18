@@ -1,8 +1,8 @@
--- MySQL dump 10.13  Distrib 8.0.26, for Win64 (x86_64)
+-- MySQL dump 10.13  Distrib 8.2.0, for Linux (x86_64)
 --
 -- Host: localhost    Database: portfoliodb
 -- ------------------------------------------------------
--- Server version	8.0.26
+-- Server version	8.2.0
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -14,6 +14,14 @@
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Current Database: `portfoliodb`
+--
+
+CREATE DATABASE /*!32312 IF NOT EXISTS*/ `portfoliodb` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
+
+USE `portfoliodb`;
 
 --
 -- Table structure for table `project`
@@ -40,11 +48,7 @@ CREATE TABLE `project` (
 
 LOCK TABLES `project` WRITE;
 /*!40000 ALTER TABLE `project` DISABLE KEYS */;
-INSERT INTO `project` VALUES (1,'-QF4bZye_Ns','An Application to control characters in a video game based on game memory data. ','','../../assets/TAGP/AStarVisualizer2.PNG','C#,.NET,Windows Forms,Pathfinding,MemoryAccess Library,Visual Studio,Git','The Automated Game Player'),
-(2,'fnVsgb1SXU8','An Android Application that controls a Treadmill based on the user\'s heart rate.','SeniorProject','../../assets/ST/MafWorkout.png','Javat,Arduino,Bluetooth,Android Studio,Git','Smart Treadmill'),
-(3,'fnVsgb1SXU8','A mock Banking Application used to Deposit, Withdraw, and Transfer funds. ','DollarsBankSpringBootApplication','../../assets/SpringbootBank/TransactionHistory.PNG','Java,Springboot,Jsp,MySQL,Rest API,JPA,CSS,Eclipse,Git,Bootstrap,HTML5','Dollars Bank'),
-(4,'fnVsgb1SXU8','A Shopping Application using Core Java, which has the option to enable MySQL mode. ','CoreJavaStandAloneShoppingApp','../../assets/ShoppingApp/ShoppingGuest.PNG','Java,JDBC,MySQL,Eclipse,Git','Core Java Shopping App'),
-(5,'fnVsgb1SXU8','Enrollee Backend which provides simple API request routes for the use of manipulating enrollee data in a MongoDB database. ','EnrolleeBackend','../../assets/EB/EnrolleeBackendRestAPI.PNG','Java,Springboot,MongoDB,Eclipse,Git,Postman','Enrollee Backend');
+INSERT INTO `project` VALUES (1,'Py9WvksIozU','An Application to control characters in a video game based on game memory data. ','','../../assets/TAGP/AStarVisualizer2.PNG','C#,.NET,Windows Forms,Pathfinding,MemoryAccess Library,Visual Studio,Git','The Automated Game Player'),(2,'fnVsgb1SXU8','An Android Application that controls a Treadmill based on the user\'s heart rate.','SeniorProject','../../assets/ST/MafWorkout.png','Javat,Arduino,Bluetooth,Android Studio,Git','Smart Treadmill'),(3,'fnVsgb1SXU8','A mock Banking Application used to Deposit, Withdraw, and Transfer funds. ','DollarsBankSpringBootApplication','../../assets/SpringbootBank/TransactionHistory.PNG','Java,Springboot,Jsp,MySQL,Rest API,JPA,CSS,Eclipse,Git,Bootstrap,HTML5','Dollars Bank'),(4,'fnVsgb1SXU8','A Shopping Application using Core Java, which has the option to enable MySQL mode. ','CoreJavaStandAloneShoppingApp','../../assets/ShoppingApp/ShoppingGuest.PNG','Java,JDBC,MySQL,Eclipse,Git','Core Java Shopping App'),(5,'fnVsgb1SXU8','Enrollee Backend which provides simple API request routes for the use of manipulating enrollee data in a MongoDB database. ','EnrolleeBackend','../../assets/EB/EnrolleeBackendRestAPI.PNG','Java,Springboot,MongoDB,Eclipse,Git,Postman','Enrollee Backend');
 /*!40000 ALTER TABLE `project` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -116,4 +120,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-09-09  1:20:03
+-- Dump completed on 2024-01-18 21:26:17

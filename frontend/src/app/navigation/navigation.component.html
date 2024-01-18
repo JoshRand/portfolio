@@ -9,13 +9,13 @@
 
 <mat-menu class="user-menu" #menu="matMenu" >
     <a *ngFor="let link of nav_links" >
-        <button mat-menu-item  [routerLink]="[link.Link]" class="mat-menu-buttons" > <a class="mat-menu-buttons-text">{{ link.LinkName }}</a></button>
+        <button  mat-menu-item  [routerLink]="[link.Link]" class="mat-menu-buttons" > <a class="mat-menu-buttons-text">{{ link.LinkName }}</a></button>
     </a>
     <app-social style="width:20px;height:20px;position:relative;left:9px;top:-5px"></app-social>
 </mat-menu>
 <div class="desktop">
     <a *ngFor="let link of nav_links" >
-        <button mat-button (click)="onClick()"  [routerLink]="[link.Link]" style="color:rgb(170,255,0);font-size: large; border-radius: 0;">{{ link.LinkName }}</button>
+        <button id="button-nav" (click)="onClick()"  [routerLink]="[link.Link]" style="color:rgb(170,255,0);font-size: large;">{{ link.LinkName }}</button>
     </a>
 </div>
 <img class="logo" src="../../favicon.svg" [routerLink]="['/']"/>

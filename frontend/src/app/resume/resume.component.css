@@ -48,7 +48,7 @@ canvas{
     .languages
     {
         max-width: 300px;
-        animation-name: slide-in;
+        /* animation-name: slide-in; */
         animation-duration: 1s;
         padding:5px;
         grid-area: languages;
@@ -61,7 +61,7 @@ canvas{
     .frameworks
     {
         grid-area: frameworks;
-        animation-name: slide-in;
+        /* animation-name: slide-in; */
         animation-duration: 1s;
         padding:5px;
         /* width: 100%; */
@@ -76,7 +76,7 @@ canvas{
     {
         padding:5px;
         grid-area: devtools;
-        animation-name: slide-in;
+        /* animation-name: slide-in; */
         animation-duration: 1s;
         /* margin-right:40%; */
         margin-left: auto;
@@ -170,7 +170,7 @@ canvas{
     {
         margin-top: 80px;
         font-size: 30px;
-        animation-name: slide-in;
+        /* animation-name: slide-in; */
         animation-duration: 1s;
         margin-left: auto;
         margin-right: auto;
@@ -189,7 +189,7 @@ canvas{
     {
         margin-top: 80px;
         font-size: 30px;
-        animation-name: slide-in;
+        /* animation-name: slide-in; */
         animation-duration: 1s;
         margin-left: auto;
         margin-right: auto;
@@ -270,7 +270,7 @@ canvas{
     .languages
     {
         max-width: 300px;
-        animation-name: slide-in;
+        /* animation-name: slide-in; */
         animation-duration: 1s;
         padding:5px;
         grid-area: languages;
@@ -280,7 +280,7 @@ canvas{
     .frameworks
     {
         grid-area: frameworks;
-        animation-name: slide-in;
+        /* animation-name: slide-in; */
         animation-duration: 1s;
         padding:5px;
         margin-left: auto;
@@ -290,7 +290,7 @@ canvas{
     {
         padding:5px;
         grid-area: devtools;
-        animation-name: slide-in;
+        /* animation-name: slide-in; */
         animation-duration: 1s;
         margin-left: auto;
     }

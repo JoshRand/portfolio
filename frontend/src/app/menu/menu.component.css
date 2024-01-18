@@ -1,41 +1,45 @@
-
-@media only screen and (min-width: 1000px)
-{
-    .routes{
+@media only screen and (min-width: 1000px) {
+    .routes {
         /* margin-left: calc(33vw - 100px) */
         margin-left: auto;
-        margin-right:auto;
+        margin-right: auto;
         /* width: 500px; */
         /* letter-spacing: -10px; */
     }
-    .social{
+
+    .social {
         display: flex;
         position: relative;
         top: 10px;
-        
+
     }
-    .mobile
-    {
+
+
+
+    .mobile {
         display: none;
     }
 }
 
-@media only screen and (max-width: 1000px)
-{
+@media only screen and (max-width: 1000px) {
 
-    .social{
+
+
+    .social {
         position: relative;
         /* margin-left:auto; */
         margin-top: 60px;
         top: 15px;
         left: 10px;
-        
+
     }
+
     /* mobile */
-    .menu{
+    .menu {
         display: none;
     }
-    mat-icon{
-        color:yellowgreen;
+
+    mat-icon {
+        color: yellowgreen;
     }
 }

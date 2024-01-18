@@ -26,7 +26,14 @@ mat-icon
     {
         display: none;
     }
-     button{
+
+    .mdc-button{
+        border: gray solid 1pt;
+    }
+     #button-nav{
+        height: 50px;
+        width: 90px;
+        padding-right: 10px;
         background-color: transparent;
     } 
 }
@@ -55,9 +62,15 @@ mat-icon
         /* font-size: 40px; */
         text-align: center;
     }
-     button{
+     .button-o{
         background-color: transparent;
         width:200px;
+    } 
+     #button-nav{
+        height: 50px;
+        width: 90px;
+        padding-right: 10px;
+        background-color: transparent;
     } 
     
 
