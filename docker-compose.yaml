@@ -20,6 +20,7 @@ services:
 
   backend:
     image: joshrand/portfoliobackend:latest
+    container_name: backend
     # build: backend
     restart: always
     env_file:
