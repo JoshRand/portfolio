@@ -211,6 +211,27 @@
                     <img src="../../assets/Icons/reactjs.svg" title="React.JS">
                 </mat-icon>       
             </span>
+
+            <span *ngIf="tech == 'C'">
+                <!-- {{tech}} -->
+                <mat-icon>
+                    <img src="../../assets/Icons/c.svg" title="React.JS">
+                </mat-icon>       
+            </span>
+
+            <span *ngIf="tech == 'GLSL'">
+                <!-- {{tech}} -->
+                <mat-icon>
+                    <img src="../../assets/Icons/glsl-opengl.svg" title="React.JS">
+                </mat-icon>       
+            </span>
+
+            <span *ngIf="tech == 'OpenGL'">
+                <!-- {{tech}} -->
+                <mat-icon>
+                    <img src="../../assets/Icons/glsl-opengl.svg" title="React.JS">
+                </mat-icon>       
+            </span>
 </div>
 <div *ngIf="tech == undefined">
     <div *ngFor="let technology of technologies">
