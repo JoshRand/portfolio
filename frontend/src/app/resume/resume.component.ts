@@ -8,42 +8,45 @@ import { Component, OnInit } from '@angular/core';
 export class ResumeComponent implements OnInit {
 
   languages = [
-    {name:"Java", proficiency:90},
+    {name:"C", proficiency:90},
     {name:"C#", proficiency:90},
     {name:"C++", proficiency:85},
-    {name:"SQL", proficiency:85},
-    {name:"JavaScript", proficiency:70}, 
-    {name:"TypeScript", proficiency:70}, 
-    {name:"Python", proficiency:60}, 
+    {name:"CSS", proficiency:60},
+    {name:"GLSL", proficiency:90},
     {name:"HTML5", proficiency:60}, 
-    {name:"CSS", proficiency:60}
+    {name:"Java", proficiency:90},
+    {name:"JavaScript", proficiency:70}, 
+    {name:"Python", proficiency:60}, 
+    {name:"SQL", proficiency:85},
+    {name:"TypeScript", proficiency:70}, 
   
   ];
 
   frameworks = [
 
-    {name:"REST API", proficiency:90}, 
-    {name:"Springboot", proficiency:80},
+    {name:".NET", proficiency:20},
     {name:"Angular", proficiency:70}, 
     {name:"Express.JS", proficiency:40},
     {name:"Nginx", proficiency:40},
-    {name:".NET", proficiency:20},
+    {name:"OpenGL", proficiency:20},
+    {name:"REST API", proficiency:90}, 
+    {name:"Springboot", proficiency:80},
   
   ];
 
   devTools = [
-    {name:"Visual Studio Code", proficiency:93}, 
-    {name:"Visual Studio", proficiency:90},
-    {name:"IntelliJ", proficiency:90},
-    {name:"Postman", proficiency:90},
-    {name:"Vim", proficiency:85},
-    {name:"Unity", proficiency:80},
-    {name:"Kafka", proficiency:80},
-    {name:"Git", proficiency:80},
-    {name:"Eclipse", proficiency:80},
     {name:"Docker", proficiency:70}, 
+    {name:"Eclipse", proficiency:80},
+    {name:"Git", proficiency:80},
+    {name:"IntelliJ", proficiency:90},
+    {name:"Kafka", proficiency:80},
     {name:"Kubernetes", proficiency:60},
+    {name:"Postman", proficiency:90},
     {name:"PuTTY", proficiency:40},
+    {name:"Unity", proficiency:80},
+    {name:"Vim", proficiency:85},
+    {name:"Visual Studio", proficiency:90},
+    {name:"Visual Studio Code", proficiency:93}, 
 
   
   ];
